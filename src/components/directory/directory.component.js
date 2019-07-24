@@ -11,14 +11,21 @@ const menuItems = [
   {id: 4, title: 'Mens', displaySize: 'large'},
 ];
 
-const Directory = (props) => {
-  return (
-    <div className='directory-menu'>
-      {menuItems && menuItems.map(
-        item => <MenuItem key={item.id} title={item.title} />
-      )}
-    </div>
-  );
-};
+class Directory extends React.Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className='directory-menu'>
+        {menuItems && menuItems.map(
+          item => <MenuItem key={item.id} title={item.title}/>
+        )}
+      </div>
+    );
+  }
+}
 
 export default Directory;
