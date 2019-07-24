@@ -1,4 +1,6 @@
 import React from 'react';
+import MenuItem from '../../components/menu-item/menu-item.component'
+
 import './homepage.styles.scss'
 
 const menuCategories = [
@@ -14,13 +16,7 @@ const Homepage = () => {
     <div className='homepage'>
       <div className='directory-menu'>
         {menuCategories && menuCategories.map(
-          category =>
-            <div key={category.id} className='menu-item'>
-              <div className='content'>
-                <h1 className='title'>Hats</h1>
-                <span className='subtitle'>Shop now</span>
-              </div>
-            </div>
+          category => <MenuItem key={category.id} title={category.title} />
         )}
       </div>
     </div>
