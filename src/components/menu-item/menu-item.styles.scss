@@ -1,17 +1,18 @@
 .menu-item {
   min-width: 30%;
   height: 240px;
-  flex: 1 1 auto;
+  margin: 0 7.5px 15px;
   display: flex;
+  flex: 1 1 auto;
   align-items: center;
   justify-content: center;
-  margin: 0 7.5px 15px;
+
+  overflow: hidden;
 
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
-  background-size: cover;
 
   &.large {
     height: 380px;
@@ -24,7 +25,27 @@
   &:last-child {
     margin-left: 7.5px;
   }
-  
+
+  &:hover {
+    .menu-item-background {
+      transform: scale(1.05);
+    }
+
+    .content {
+      filter: opacity(0.9);
+    }
+  }
+
+  .menu-item-background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    transition: transform ease-out 1s;
+  }
+
   .content {
     height: 90px;
     padding: 0 25px;
@@ -33,20 +54,18 @@
     align-items: center;
     justify-content: center;
     background-color: #fff;
-    filter: opacity(0.6);
+    filter: opacity(0.7);
 
     .title {
       font-weight: bold;
       margin-bottom: 6px;
       font-size: 22px;
       color: #4a4a4a;
-      text-transform: uppercase;
     }
 
     .subtitle {
       font-weight: lighter;
       font-size: 16px;
-      text-transform: uppercase;
     }
   }
 }
