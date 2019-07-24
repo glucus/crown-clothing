@@ -11,6 +11,8 @@
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
 
   &:first-child {
     margin-right: 7.5px;
