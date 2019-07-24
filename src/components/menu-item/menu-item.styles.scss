@@ -6,13 +6,10 @@
   flex: 1 1 auto;
   align-items: center;
   justify-content: center;
-
   overflow: hidden;
 
   position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
+
 
   &.large {
     height: 380px;
@@ -28,7 +25,9 @@
 
   &:hover {
     .menu-item-background {
-      transform: scale(1.05);
+      cursor: pointer;
+      transform: scale(1.1);
+      transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
 
     .content {
@@ -43,7 +42,9 @@
     left: 0;
     top: 0;
     background-size: cover;
-    transition: transform ease-out 1s;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
   }
 
   .content {
