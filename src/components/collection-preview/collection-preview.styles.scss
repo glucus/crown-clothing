@@ -12,4 +12,9 @@
     display: flex;
     justify-content: space-between;
   }
+
+  .item-preview {
+    display: flex;
+    flex-direction: column;
+  }
 }
