@@ -11,8 +11,8 @@ const CollectionPreview = ({title, items}) => {
       <div className='preview'>
         {previewItems.map(
           item => <div key={item.id} className='item-preview'>
-            {item.name}
             <img src={item.imageUrl} alt={item.name} />
+            {item.name}
           </div>
         )}
       </div>
