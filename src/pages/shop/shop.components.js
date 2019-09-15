@@ -19,11 +19,7 @@ class ShopPage extends Component {
     return (
       <div className='shop-page'>
         {collections.map(
-          collection => <CollectionPreview
-            key={collection.id}
-            title={collection.title}
-            items={collection.items}
-          />
+          ({id, ...otherProps}) => <CollectionPreview key={id} {...otherProps} />
         )}
         <button onClick={() => this.props.history.push('/')}>
           To home page
