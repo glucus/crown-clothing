@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import SHOP_DATA from './shop.data'
+import CollectionPreview from "../../components/collection-preview/collection-preview.component";
 
 class ShopPage extends Component {
 
@@ -12,9 +13,18 @@ class ShopPage extends Component {
   }
 
   render() {
+
+    const {collections} = this.state;
+
     return (
-      <div>
-        <h1>SHOP PAGE</h1>
+      <div className='shop-page'>
+        {collections.map(
+          collection => <CollectionPreview
+            key={collection.id}
+            title={collection.title}
+            items={collection.items}
+          />
+        )}
         <button onClick={() => this.props.history.push('/')}>
           To home page
         </button>
